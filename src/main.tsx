@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <CookiesProvider>
       <Provider store={store}>
-      <App />
+      <App/>
       </Provider>
        
     </CookiesProvider>

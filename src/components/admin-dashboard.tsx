@@ -13,7 +13,7 @@ export function AdminDashboard(){
     let navigate = useNavigate();
 
     function LoadVideos(){
-        axios.get(`http://127.0.0.1:5053/get-videos`)
+        axios.get(`http://127.0.0.1:5054/get-videos`)
         .then(response=>{
             setVideos(response.data);
             console.log(response.data,"category_idcategory_id")

@@ -13,7 +13,7 @@ export function AdminLogin(){
             password: ''
         },
         onSubmit : (admin:any)=>{
-             axios.get(`http://127.0.0.1:5053/get-admin`)
+             axios.get(`http://127.0.0.1:5054/get-admin`)
              .then(response=> {
                  let result = response.data.find((item:any)=> item.admin_id===admin.admin_id);
                  if(result){

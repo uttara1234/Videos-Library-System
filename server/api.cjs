@@ -148,6 +148,6 @@ app.get("/get-user",(req,res)=>{
       });
 });
 
-app.listen(5053);
-console.log(`API Started http://127.0.0.1:5053`);
+app.listen(5054);
+console.log(`API Started http://127.0.0.1:5054`);
 

@@ -27,7 +27,7 @@ export function EditVideo(){
                 category_id:videos[0].category_id
             },
             onSubmit : (video) => {
-                axios.put(`http://127.0.0.1:5053/edit-video/${params.id}`, video)
+                axios.put(`http://127.0.0.1:5054/edit-video/${params.id}`, video)
                 .then(()=>{
                     console.log('modified');
                 })
@@ -38,7 +38,7 @@ export function EditVideo(){
         })
 
         function LoadCategories(){
-            axios.get(`http://127.0.0.1:5053/get-categories`)
+            axios.get(`http://127.0.0.1:5054/get-categories`)
             .then(response=> {
                  response.data.unshift({category_id:-1, category_name:'Select Category'});
                  setCategories(response.data);
@@ -47,7 +47,7 @@ export function EditVideo(){
 
 
         function LoadVideos(){
-            axios.get(`http://127.0.0.1:5053/get-video/${params.id}`)
+            axios.get(`http://127.0.0.1:5054/get-video/${params.id}`)
             .then(response =>{ 
                 setVideos(response.data);
             })

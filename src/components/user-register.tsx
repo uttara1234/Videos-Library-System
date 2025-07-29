@@ -16,7 +16,7 @@ export function UserRegister(){
             mobile:''
          },
          onSubmit:(user)=>{
-            axios.post(`http://127.0.0.1:5053/register-user`, user)
+            axios.post(`http://127.0.0.1:5054/register-user`, user)
             .then(()=>{
                 console.log(`Registered`);
             })
@@ -26,7 +26,7 @@ export function UserRegister(){
          }
         })
          function VerifyUser(e:any){
-        axios.get(`http://127.0.0.1:5053/get-user`)
+        axios.get(`http://127.0.0.1:5054/get-user`)
         .then(response=> {
              for(const user of response.data){
                   if(user.user_id===e.target.value){
